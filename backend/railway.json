@@ -5,7 +5,6 @@
   },
   "deploy": {
     "startCommand": "python manage.py migrate && gunicorn twitterclone.wsgi --log-file -",
-    "healthcheckPath": "/api/explore/",
     "restartPolicyType": "ON_FAILURE"
   }
 }
