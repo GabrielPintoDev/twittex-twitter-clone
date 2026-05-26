@@ -4,7 +4,6 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "python manage.py migrate && gunicorn twitterclone.wsgi --log-file -",
     "restartPolicyType": "ON_FAILURE"
   }
 }
