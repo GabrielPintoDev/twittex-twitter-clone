@@ -1,0 +1,136 @@
+.card {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.15s;
+  animation: fadeIn 0.25s ease;
+}
+.card:hover { background: rgba(255,255,255,0.02); }
+
+.body { flex: 1; min-width: 0; }
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.authorName {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text);
+  transition: var(--transition);
+}
+.authorName:hover { text-decoration: underline; }
+
+.handle, .dot, .time {
+  font-size: 14px;
+  color: var(--text-2);
+}
+
+.deleteBtn {
+  margin-left: auto;
+  color: var(--text-3);
+  padding: 4px;
+  border-radius: 50%;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+}
+.deleteBtn:hover { color: var(--danger); background: var(--danger-dim); }
+
+.content {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text);
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin-bottom: 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 24px;
+  margin-top: 4px;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--text-2);
+  padding: 6px 10px;
+  border-radius: var(--radius-full);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.comment:hover { color: var(--accent); background: var(--accent-dim); }
+
+.like:hover { color: var(--like); background: var(--like-dim); }
+.like.liked { color: var(--like); }
+.like.likeAnim svg { animation: likeAnim 0.35s ease; }
+
+.commentsBox {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.commentForm {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.commentInput {
+  flex: 1;
+  background: var(--bg-2);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-full);
+  padding: 8px 14px;
+  color: var(--text);
+  font-size: 14px;
+  outline: none;
+  transition: var(--transition);
+}
+.commentInput:focus { border-color: var(--accent); }
+.commentInput::placeholder { color: var(--text-3); }
+
+.comment {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.commentContent {
+  flex: 1;
+  background: var(--bg-2);
+  border-radius: var(--radius);
+  padding: 8px 12px;
+}
+
+.commentAuthor {
+  font-weight: 700;
+  font-size: 13px;
+  margin-right: 8px;
+}
+
+.commentText { font-size: 14px; color: var(--text-2); }
+
+.deleteCommentBtn {
+  color: var(--text-3);
+  font-size: 12px;
+  padding: 4px;
+  transition: var(--transition);
+  align-self: center;
+}
+.deleteCommentBtn:hover { color: var(--danger); }

@@ -1,0 +1,94 @@
+.page { min-height: 100vh; }
+
+.header {
+  position: sticky;
+  top: 0;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(12px);
+  z-index: 10;
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.content { display: flex; flex-direction: column; }
+
+.section {
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.avatarArea {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.success {
+  background: rgba(0,186,124,0.1);
+  border: 1px solid rgba(0,186,124,0.3);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  color: var(--success);
+  font-size: 14px;
+}
+
+.error {
+  background: var(--danger-dim);
+  border: 1px solid rgba(244,33,46,0.3);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  color: var(--danger);
+  font-size: 14px;
+}
+
+.form { display: flex; flex-direction: column; gap: 14px; max-width: 560px; }
+
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field label { font-size: 13px; font-weight: 600; color: var(--text-2); }
+.field input, .field textarea {
+  background: var(--bg-2);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  color: var(--text);
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  transition: var(--transition);
+  resize: vertical;
+}
+.field input:focus, .field textarea:focus {
+  border-color: var(--accent);
+  background: var(--bg);
+}
+.field input::placeholder, .field textarea::placeholder { color: var(--text-3); }
+
+.infoRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.infoLabel { font-size: 14px; color: var(--text-2); width: 80px; }
+.infoValue { font-size: 15px; font-weight: 500; }
+
+@media (max-width: 600px) {
+  .row { grid-template-columns: 1fr; }
+}
