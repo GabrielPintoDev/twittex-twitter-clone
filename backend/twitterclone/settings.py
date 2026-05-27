@@ -92,7 +92,7 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=30),
 }
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = ["https://twittex-twitter-clone.vercel.app/login"]
 CORS_ALLOW_CREDENTIALS = True
 
 # Whitenoise for static files in production
